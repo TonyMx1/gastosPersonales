@@ -188,7 +188,7 @@ export default function ExpenseForm({ expense, categories, onSave, onCancel, onC
               min="0"
               value={formData.amount}
               onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
-              className={`w-full px-3 py-2 border rounded-md ${
+              className={`w-full px-3 py-2 border rounded-md text-gray-900 bg-white ${
                 errors.amount ? 'border-red-500' : 'border-gray-300'
               } focus:outline-none focus:ring-2 focus:ring-blue-500`}
               placeholder="0.00"
@@ -206,7 +206,7 @@ export default function ExpenseForm({ expense, categories, onSave, onCancel, onC
               id="categoryId"
               value={showNewCategory ? 'new' : formData.categoryId}
               onChange={(e) => handleCategorySelect(e.target.value)}
-              className={`w-full px-3 py-2 border rounded-md ${
+              className={`w-full px-3 py-2 border rounded-md text-gray-900 bg-white ${
                 errors.categoryId ? 'border-red-500' : 'border-gray-300'
               } focus:outline-none focus:ring-2 focus:ring-blue-500`}
             >
@@ -234,7 +234,7 @@ export default function ExpenseForm({ expense, categories, onSave, onCancel, onC
                   id="newCategoryName"
                   value={newCategoryName}
                   onChange={(e) => setNewCategoryName(e.target.value)}
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded-md text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Ej: Ropa, Tecnología, etc."
                   onKeyPress={(e) => {
                     if (e.key === 'Enter') {
@@ -275,7 +275,7 @@ export default function ExpenseForm({ expense, categories, onSave, onCancel, onC
               id="date"
               value={formData.date}
               onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-              className={`w-full px-3 py-2 border rounded-md ${
+              className={`w-full px-3 py-2 border rounded-md text-gray-900 bg-white ${
                 errors.date ? 'border-red-500' : 'border-gray-300'
               } focus:outline-none focus:ring-2 focus:ring-blue-500`}
             />
@@ -293,7 +293,7 @@ export default function ExpenseForm({ expense, categories, onSave, onCancel, onC
               value={formData.description}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
               rows={3}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Descripción opcional del gasto"
             />
           </div>
